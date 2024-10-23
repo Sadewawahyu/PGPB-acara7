@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bottom_navigation"
+    app:startDestination="@id/homeFragment">
+
+    <!-- HomeFragment -->
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.bottomlayout.homeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_destinationFragment"
+            app:destination="@id/destinationFragment" />
+    </fragment>
+
+    <!-- CartFragment -->
+    <fragment
+        android:id="@+id/cartFragment"
+        android:name="com.example.bottomlayout.cartFragment"
+        android:label="fragment_cart"
+        tools:layout="@layout/fragment_cart" >
+        <action
+            android:id="@+id/action_cartFragment_to_chooseFragment"
+            app:destination="@id/chooseFragment" />
+    </fragment>
+
+    <!-- ProfileFragment -->
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.bottomlayout.profileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+
+    <!-- DestinationFragment -->
+    <fragment
+        android:id="@+id/destinationFragment"
+        android:name="com.example.bottomlayout.destinationFragment"
+        android:label="fragment_destination"
+        tools:layout="@layout/fragment_destination" />
+
+    <!-- CheckoutFragment -->
+    <fragment
+        android:id="@+id/checkoutFragment"
+        android:name="com.example.bottomlayout.checkoutFragment"
+        android:label="fragment_checkout"
+        tools:layout="@layout/fragment_checkout" >
+        <action
+            android:id="@+id/action_checkoutFragment_to_chooseFragment"
+            app:destination="@id/chooseFragment" />
+    </fragment>
+
+    <!-- ChooseFragment -->
+    <fragment
+        android:id="@+id/chooseFragment"
+        android:name="com.example.bottomlayout.chooseFragment"
+        android:label="fragment_choose"
+        tools:layout="@layout/fragment_choose" >
+        <action
+            android:id="@+id/action_chooseFragment_to_checkoutFragment"
+            app:destination="@id/checkoutFragment" />
+    </fragment>
+
+</navigation>
